@@ -12,11 +12,11 @@ Follow the prompts in the command line to create the project. Once complete, cha
 npm run dev
 ```
 
-You can edit the `pages/index.js` file and the API route file `pages/api/files` so see the Pinata functionality and extend it or make changes.
+You can edit the `pages/index.js` file and the API route file `pages/api/files` to see the Pinata functionality and extend it or make changes.
 
 ### Environment Variables
 
-This projects makes use of both public and private environment variables. The private environment variables are used to protect sensitive data like your Pinata API keys. The public environment variables are convenient central variable housing.
+This project makes use of both public and private environment variables. The private environment variables are used to protect sensitive data like your Pinata API keys. The public environment variables are convenient central variable housing.
 
 Read more about [how environment variables work with Next.js here](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables).
 
