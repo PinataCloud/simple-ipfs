@@ -1,277 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @font-face {
-  font-family: "Agrandir Wide";
-    font-style: normal;
+  font-family: "Agrandir";
+  font-style: normal;
   font-weight: 100 900;
-  src: url("../fonts/AgrandirVariable.woff2") format("woff");
+  src: url("../fonts/AgrandirVariable.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Telegraf";
-    font-style: normal;
+  font-style: normal;
   font-weight: 100 900;
-  src: url("../fonts/TelegrafVariable.woff2") format("woff");
+  src: url("../fonts/TelegrafVariable.woff2") format("woff2");
 }
+@tailwind base;
+@layer base {
+  :root {
+    --color-accent: #6d57ff;
+    --color-secondary: #8A79FF;
+    --color-light: #f6f6f6;
+    --color-dark: #000;
+    --color-grey: #eee;
+  }
 
-:root {
-  --color-accent: #6d57ff;
-  --color-secondary: #8A79FF;
-  --color-light: #f6f6f6;
-  --color-dark: #000;
-  --color-grey: #eee;
+  html {
+    @apply p-0 m-0 scroll-smooth w-full h-full;
+  }
+
+  html body {
+    @apply m-0 h-screen w-full bg-light text-black font-telegraf;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-agrandir font-bold;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+
+  a {
+    @apply text-black;
+  }
+
+  button {
+    @apply font-telegraf font-bold;
+  }
+
 }
-
-html {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Telegraf", sans-serif;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin: 0;
-}
-
-main {
-  min-height: 100vh;
-  width: 100%;
-
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Agrandir Wide";
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-a {
-  color: black;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-background {
-  height: 100%;
-  width: 100%;
-  background-image: url("/bg.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.logo {
-  width: 85%;
-  margin: auto;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.hero {
-  height: 100%;
-  width: 85%;
-  margin: auto;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.copy {
-  width: 50%;
-}
-
-.hero-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-}
-
-.btn {
-  min-width: 9.38em;
-  color: #fff;
-  background-color: var(--color-secondary);
-  background-image: none;
-  border: none;
-  border-radius: 100px;
-  justify-content: center;
-  align-items: center;
-  padding: 0.63rem 2.5em;
-  font-size: 1em;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--color-accent);
-}
+@tailwind components;
+@tailwind utilities;
 
 
-.btn-light {
-  min-width: 9.38em;
-  color: var(--color-accent);
-  background-color: var(--color-light);
-  background-image: none;
-  border: 2px solid #6d57ff;
-  border-radius: 48px;
-  justify-content: center;
-  align-items: center;
-  padding: 0.63rem 2.5em;
-  font-family: "Telegraf", sans-serif;
-  font-size: 1em;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-}
-
-.btn-light:hover {
-  background: #6d57ff;
-  color: #fff;
-}
-
-.flex-btns {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-btns .btn {
-  margin-right: 10px;
-}
-
-.code {
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-style: italic;
-  border: 2px solid var(--color-accent);
-}
-
-.file-list a {
-  border-bottom: 2px solid var(--color-accent);
-  background: linear-gradient(to right, #6D57FF, #E397F9);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: moving-gradient 2s linear infinite;
-}
-
-.file-list a:hover {
-  transform: scale(1.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.grid-background {
-  background: var(--color-secondary);
-  height: 100%;
-  width: 100%
-}
-
-.grid {
-  width: 85%;
-  min-height: 100%;
-  margin: 2rem auto 2rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.card {
-  text-align: center;
-  background-color: var(--color-light);
-  border-radius: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
-  padding: 2rem;
-}
-
-.card h2 {
-  font-family: "Telegraf", sans-serif;
-  font-weight: 700;
-}
-
-.card p {
-  max-width: 60%;
-}
-
-.footer-background {
-  background-color: var(--color-accent);
-  width: 100%;
-  height: 100%;
-}
-
-.footer {
-  width: 85%;
-  padding: 0.5rem 0 0.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--color-light);
-  margin: auto;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.socials svg {
-  width: 2rem;
-  height: 2rem;
-}
-
-@keyframes moving-gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }

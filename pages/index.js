@@ -53,17 +53,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/pinnie.png" />
       </Head>
-      <main>
-        <div className="container">
-          <div className="hero-background">
-            <div className="logo">
+      <main className="w-full min-h-screen m-auto flex flex-col justify-center items-center">
+        <div className="w-full h-full m-auto bg-heroImage bg-cover bg-center flex flex-col justify-center items-center">
+          <div className="h-full max-w-screen-2xl">
+            <div className="w-full m-auto mt-16 flex justify-start items-center">
               <Image src="/logo.png" alt="Pinata logo" height={45} width={172.5} />
             </div>
-            <div className="hero">
-              <div className="copy">
+            <div className="h-full w-full m-auto mt-16 flex justify-center items-center gap-8">
+              <div className="w-1/2 flex flex-col gap-6">
                 <h1>Pinata + Next.js</h1>
                 <p>
-                  Update the <span className="code">.env.local</span> file to set your
+                  Update the <span className="py-1 px-2 rounded-md italic border-2 border-accent">.env.local</span> file to set your
                   Pinata API key and (optionally) your IPFS gateway URL, restart the
                   app, then click the Upload button and you'll see uploads to IPFS
                   just work™️. If you've already uploaded files, click Load recent to
@@ -76,45 +76,43 @@ export default function Home() {
                   onChange={handleChange}
                   style={{ display: "none" }}
                 />
-                <div className="flex-btns">
-                  <button onClick={loadRecent} className="btn btn-light">
+                <div>
+                  <button onClick={loadRecent} className="mr-10 w-[150px] bg-light text-secondary border-2 border-secondary rounded-3xl py-2 px-4 hover:bg-secondary hover:text-light transition-all duration-300 ease-in-out">
                     Load recent
                   </button>
                   <button
                     disabled={uploading}
                     onClick={() => inputFile.current.click()}
-                    className="btn"
+                    className="w-[150px] bg-secondary text-light rounded-3xl py-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out"
                   >
                     {uploading ? "Uploading..." : "Upload"}
                   </button>
                 </div>
                 {cid && (
-                  <div className="file-list">
-                    <Files cid={cid} />
-                  </div>
+                  <Files cid={cid} />
                 )}
               </div>
-              <div className="hero-img">
+              <div className="w-1/2 flex justify-center items-center h-full">
                 <Image height={600} width={600} src="/hero.png" alt="hero image of computer and code" />
               </div>
             </div>
           </div>
-          <div className="grid-background">
-            <div className="grid">
-              <div className="card">
+          <div className="h-full w-full bg-secondary">
+            <div className="max-w-screen-2xl min-h-full my-8 mx-auto flex justify-center items-center gap-8">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[450px]">
                 <Image
                   src="/ufo.png"
                   alt="Pinnie floating with balloons"
                   height="147"
                   width="146"
                 />
-                <h2>Read the docs</h2>
-                <p>
+                <h2 className="font-telegraf font-bold text-3xl">Read the docs</h2>
+                <p className="w-2/3">
                   SDKs, API reference, and recipes all designed to help you get
                   started faster.
                 </p>
                 <a
-                  className="btn"
+                  className="bg-secondary text-light rounded-3xl py-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
                   href="https://docs.pinata.cloud"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -122,20 +120,20 @@ export default function Home() {
                   Explore the docs
                 </a>
               </div>
-              <div className="card">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[450px]">
                 <Image
                   src="/rocket.png"
                   alt="Pinnie with scuba gear on"
                   height="161"
                   width="207"
                 />
-                <h2>Pinata dashboard</h2>
-                <p>
+                <h2 className="font-telegraf font-bold text-3xl">Pinata dashboard</h2>
+                <p className="w-2/3">
                   Log into your Pinata dashboard to see all your files, configure an
                   IPFS gateway, and more.
                 </p>
                 <a
-                  className="btn"
+                  className="bg-secondary text-light rounded-3xl py-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
                   href="https://app.pinata.cloud"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -146,12 +144,12 @@ export default function Home() {
 
             </div>
           </div>
-          <div className="footer-background">
-            <div className="footer">
+          <div className="bg-accent w-full h-full">
+            <div className="max-w-screen-xl py-2 flex justify-between items-center text-light">
               <p>Copyright © 2023 Pinata | All Rights Reserved </p>
-              <div className="socials">
+              <div className="flex items-center gap-10">
                 <a href="https://twitter.com/pinatacloud" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="#f6f6f6" className="text-textColor h-6 w-6" viewBox="0 0 512 512">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#f6f6f6" className="h-6 w-6" viewBox="0 0 512 512">
                     <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
                   </svg>
                 </a>
