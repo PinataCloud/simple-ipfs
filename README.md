@@ -1,6 +1,6 @@
 ## Getting Started
 
-Create a new Pinata project using this command:
+Create a new Pinata project with tailwindcss using this command:
 
 ```
 npx create-pinata-app
@@ -21,6 +21,10 @@ This project makes use of both public and private environment variables. The pri
 Read more about [how environment variables work with Next.js here](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables).
 
 There is a `.env.sample` file you can copy and rename to `.env.local` for use in your project. Be sure to fill out the environment variable values in the `.env.local` file with your actual values.
+
+### Styling
+
+This project already has tailwindcss ready to use out of the box.
 
 ### Learn More
 
