@@ -145,8 +145,8 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-accent w-full h-full">
-            <div className="max-w-screen-xl mx-auto py-2 flex justify-between items-center text-light">
-              <p>Copyright © 2023 Pinata | All Rights Reserved </p>
+            <div className="max-w-screen-xl mx-auto py-6 flex justify-between items-center text-light">
+              <p className="text-xs">Copyright © 2023 Pinata | All Rights Reserved </p>
               <div className="flex items-center gap-10 mr-4">
                 <a href="https://twitter.com/pinatacloud" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="#f6f6f6" className="h-6 w-6" viewBox="0 0 512 512">
