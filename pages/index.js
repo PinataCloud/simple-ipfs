@@ -55,11 +55,11 @@ export default function Home() {
       </Head>
       <main className="w-full min-h-screen m-auto flex flex-col justify-center items-center">
         <div className="w-full h-full m-auto bg-heroImage bg-cover bg-center flex flex-col justify-center items-center">
-          <div className="h-full max-w-screen-2xl">
+          <div className="h-full max-w-screen-xl">
             <div className="w-full m-auto mt-16 flex justify-start items-center">
-              <Image src="/logo.png" alt="Pinata logo" height={45} width={172.5} />
+              <Image src="/logo.png" alt="Pinata logo" height={30} width={115} />
             </div>
-            <div className="h-full w-full m-auto mt-16 flex justify-center items-center gap-8">
+            <div className="h-full w-full m-auto flex justify-center items-center gap-8">
               <div className="w-1/2 flex flex-col gap-6">
                 <h1>Pinata + Next.js</h1>
                 <p>
@@ -98,13 +98,13 @@ export default function Home() {
             </div>
           </div>
           <div className="h-full w-full bg-secondary">
-            <div className="max-w-screen-2xl min-h-full my-8 mx-auto flex justify-center items-center gap-8">
-              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[450px]">
+            <div className="max-w-screen-xl min-h-full my-8 mx-auto flex justify-center items-center gap-8">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[550px]">
                 <Image
                   src="/ufo.png"
                   alt="Pinnie floating with balloons"
-                  height="147"
-                  width="146"
+                  height="200"
+                  width="200"
                 />
                 <h2 className="font-telegraf font-bold text-3xl">Read the docs</h2>
                 <p className="w-2/3">
@@ -120,12 +120,12 @@ export default function Home() {
                   Explore the docs
                 </a>
               </div>
-              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[450px]">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[550px]">
                 <Image
                   src="/rocket.png"
                   alt="Pinnie with scuba gear on"
-                  height="161"
-                  width="207"
+                  height="200"
+                  width="200"
                 />
                 <h2 className="font-telegraf font-bold text-3xl">Pinata dashboard</h2>
                 <p className="w-2/3">
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-accent w-full h-full">
-            <div className="max-w-screen-2xl mx-auto py-2 flex justify-between items-center text-light">
+            <div className="max-w-screen-xl mx-auto py-2 flex justify-between items-center text-light">
               <p>Copyright © 2023 Pinata | All Rights Reserved </p>
               <div className="flex items-center gap-10 mr-4">
                 <a href="https://twitter.com/pinatacloud" target="_blank">
