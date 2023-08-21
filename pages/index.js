@@ -99,7 +99,7 @@ export default function Home() {
           </div>
           <div className="h-full w-full bg-secondary">
             <div className="max-w-screen-xl min-h-full my-8 mx-auto flex justify-center items-center gap-8">
-              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[550px]">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[475px]">
                 <Image
                   src="/ufo.png"
                   alt="Pinnie floating with balloons"
@@ -112,7 +112,7 @@ export default function Home() {
                   started faster.
                 </p>
                 <a
-                  className="bg-secondary text-light rounded-3xl py-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
+                  className="bg-secondary text-light rounded-3xl pt-3 pb-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
                   href="https://docs.pinata.cloud"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -120,7 +120,7 @@ export default function Home() {
                   Explore the docs
                 </a>
               </div>
-              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[550px]">
+              <div className="text-center bg-light rounded-lg w-full flex flex-col justify-center items-center p-2 gap-4 h-[475px]">
                 <Image
                   src="/rocket.png"
                   alt="Pinnie with scuba gear on"
@@ -133,7 +133,7 @@ export default function Home() {
                   IPFS gateway, and more.
                 </p>
                 <a
-                  className="bg-secondary text-light rounded-3xl py-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
+                  className="bg-secondary text-light rounded-3xl pt-3 pb-2 px-4 hover:bg-accent hover:text-light transition-all duration-300 ease-in-out font-telegraf font-bold"
                   href="https://app.pinata.cloud"
                   rel="noopener noreferrer"
                   target="_blank"
