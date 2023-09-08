@@ -1,6 +1,5 @@
 import formidable from "formidable";
 import fs from "fs";
-import FormData from "form-data";
 const pinataSDK = require("@pinata/sdk");
 const pinata = new pinataSDK({ pinataJWTKey: process.env.PINATA_JWT });
 
@@ -10,12 +9,15 @@ export const config = {
   },
 };
 
-const saveFile = async (file) => {
+const saveFile = async (file, fields) => {
   try {
     const stream = fs.createReadStream(file.filepath);
     const options = {
       pinataMetadata: {
-        name: file.originalFilename,
+        name: fields.name,
+        keyvalues: {
+          description: fields.description
+        }
       },
     };
     const response = await pinata.pinFileToIPFS(stream, options);
@@ -32,14 +34,18 @@ export default async function handler(req, res) {
     try {
       const form = new formidable.IncomingForm();
       form.parse(req, async function (err, fields, files) {
-        if (err) {
-          console.log({ err });
-          return res.status(500).send("Upload Error");
+        try {
+          if (err) {
+            console.log({ err });
+            return res.status(500).send("Upload Error");
+          }
+          const response = await saveFile(files.file, fields);
+          const { IpfsHash } = response;
+  
+          return res.status(200).send(IpfsHash);
+        } catch (error) {
+          console.log(error);
         }
-        const response = await saveFile(files.file);
-        const { IpfsHash } = response;
-
-        return res.send(IpfsHash);
       });
     } catch (e) {
       console.log(e);
